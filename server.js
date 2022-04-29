@@ -65,6 +65,7 @@ async function init() {
 /**
  * importing the routes
  */
+ require('./routes/auth.routes')(app);
 
 
 app.listen(serverConfig.PORT, () => {
