@@ -15,6 +15,11 @@ exports.createElection = async (req, res) =>  {
       catch(err){
         res.status(500).send({"message":"Failed to create election"}); 
       }
-
-
 }
+exports.getElection = async (req, res) =>  {
+  const elections = await Elections.find();
+  if (elections) {
+      return res.status(200).send(elections);
+  }
+}
+
