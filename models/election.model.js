@@ -11,7 +11,8 @@ const electionSchema = mongoose.Schema({
     },
     status: {
       type:String,
-      required:true
+      required:true,
+      default:"active"
     },
     createdAt: {
         // I want to default to a new date
